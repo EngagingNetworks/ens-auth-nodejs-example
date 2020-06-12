@@ -1,0 +1,22 @@
+{
+  "name": "auth-to-ens-nodejs-example",
+  "version": "1.0.0",
+  "description": "An example server to provide temporary ENS session tokens to browser JS or apps.",
+  "main": "index.js",
+  "scripts": {
+    "devstart": "nodemon start.js",
+    "start": "node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Iain Ure",
+    "email": "iain@engagingnetworks.net"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
