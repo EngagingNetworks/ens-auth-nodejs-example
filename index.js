@@ -29,6 +29,9 @@ function start(config = {}){
 	// start up our server
 	const server = https.createServer(
 		// load HTTPS cert and key
+		// self-signed cert for testing purposes: https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/
+		// don't use self-signed for production
+
 		{
 			key: fs.readFileSync(SSL_KEY_FILE),
 			cert: fs.readFileSync(SSL_CERT_FILE)
@@ -42,7 +45,7 @@ function start(config = {}){
 			}
 
 
-			// headers, including cors required ones
+			// headers, including those required for CORS
 			const responseHeaders = {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': request.headers.origin || '*',
